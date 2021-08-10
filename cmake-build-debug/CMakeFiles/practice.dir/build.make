@@ -66,27 +66,27 @@ include CMakeFiles/practice.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/practice.dir/flags.make
 
-CMakeFiles/practice.dir/main.cpp.o: CMakeFiles/practice.dir/flags.make
-CMakeFiles/practice.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shivamtripathi/Desktop/GitHub/practice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/practice.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/practice.dir/main.cpp.o -c /Users/shivamtripathi/Desktop/GitHub/practice/main.cpp
+CMakeFiles/practice.dir/linkedList.cpp.o: CMakeFiles/practice.dir/flags.make
+CMakeFiles/practice.dir/linkedList.cpp.o: ../linkedList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shivamtripathi/Desktop/GitHub/practice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/practice.dir/linkedList.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/practice.dir/linkedList.cpp.o -c /Users/shivamtripathi/Desktop/GitHub/practice/linkedList.cpp
 
-CMakeFiles/practice.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/practice.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shivamtripathi/Desktop/GitHub/practice/main.cpp > CMakeFiles/practice.dir/main.cpp.i
+CMakeFiles/practice.dir/linkedList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/practice.dir/linkedList.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shivamtripathi/Desktop/GitHub/practice/linkedList.cpp > CMakeFiles/practice.dir/linkedList.cpp.i
 
-CMakeFiles/practice.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practice.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivamtripathi/Desktop/GitHub/practice/main.cpp -o CMakeFiles/practice.dir/main.cpp.s
+CMakeFiles/practice.dir/linkedList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practice.dir/linkedList.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivamtripathi/Desktop/GitHub/practice/linkedList.cpp -o CMakeFiles/practice.dir/linkedList.cpp.s
 
 # Object files for target practice
 practice_OBJECTS = \
-"CMakeFiles/practice.dir/main.cpp.o"
+"CMakeFiles/practice.dir/linkedList.cpp.o"
 
 # External object files for target practice
 practice_EXTERNAL_OBJECTS =
 
-practice: CMakeFiles/practice.dir/main.cpp.o
+practice: CMakeFiles/practice.dir/linkedList.cpp.o
 practice: CMakeFiles/practice.dir/build.make
 practice: CMakeFiles/practice.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shivamtripathi/Desktop/GitHub/practice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable practice"

@@ -129,29 +129,29 @@ practice/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice.dir/build.make CMakeFiles/practice.dir/build
 .PHONY : practice/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+linkedList.o: linkedList.cpp.o
+.PHONY : linkedList.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice.dir/build.make CMakeFiles/practice.dir/main.cpp.o
-.PHONY : main.cpp.o
+linkedList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice.dir/build.make CMakeFiles/practice.dir/linkedList.cpp.o
+.PHONY : linkedList.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+linkedList.i: linkedList.cpp.i
+.PHONY : linkedList.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice.dir/build.make CMakeFiles/practice.dir/main.cpp.i
-.PHONY : main.cpp.i
+linkedList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice.dir/build.make CMakeFiles/practice.dir/linkedList.cpp.i
+.PHONY : linkedList.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+linkedList.s: linkedList.cpp.s
+.PHONY : linkedList.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice.dir/build.make CMakeFiles/practice.dir/main.cpp.s
-.PHONY : main.cpp.s
+linkedList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice.dir/build.make CMakeFiles/practice.dir/linkedList.cpp.s
+.PHONY : linkedList.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... practice"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... linkedList.o"
+	@echo "... linkedList.i"
+	@echo "... linkedList.s"
 .PHONY : help
 
 

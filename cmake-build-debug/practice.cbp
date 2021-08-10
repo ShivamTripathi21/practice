@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/shivamtripathi/Desktop/GitHub/practice/main.cpp">
+		<Unit filename="/Users/shivamtripathi/Desktop/GitHub/practice/linkedList.cpp">
 			<Option target="practice"/>
 		</Unit>
 		<Unit filename="/Users/shivamtripathi/Desktop/GitHub/practice/CMakeLists.txt">
