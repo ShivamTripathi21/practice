@@ -14,7 +14,7 @@ LinkedList *NewNode(int data){
     temp->next = NULL;
     return temp;
 }
-
+//adding value at the end
 void addAfter(LinkedList **head_ref, int data){
     if(*head_ref == NULL) *head_ref = NewNode(data);
     else{
@@ -23,6 +23,7 @@ void addAfter(LinkedList **head_ref, int data){
         temp->next = NewNode(data);
     }
 }
+//adding value at the begning
 void addBefore(LinkedList **head_ref, int data){
     if(*head_ref == NULL) *head_ref = NewNode(data);
     else{
@@ -30,6 +31,66 @@ void addBefore(LinkedList **head_ref, int data){
         LinkedList *first = NewNode(data);
         first->next = temp;
         *head_ref = first;
+    }
+}
+//adding value at given position
+void addAt(LinkedList **head_ref, int data, int position){
+    if(position <= 1) addBefore(head_ref, data);
+    else{
+        LinkedList *temp = *head_ref;
+        int count = 2;
+        while(temp != NULL){
+            if(count == position){
+                LinkedList *tempA;
+                LinkedList *newN = NewNode(data);
+                tempA = temp->next;
+                temp->next = newN;
+                newN->next = tempA;
+                break;
+            }
+            temp = temp->next;
+            count++;
+        }
+    }
+}
+// delete at given position
+void deleteAt(LinkedList **head_ref, int position){
+    if(*head_ref != NULL){
+        LinkedList *temp = *head_ref;
+        if(position == 1){
+            *head_ref = temp->next;
+            free(temp);
+            return;
+        }
+        int count = 1;
+        while(temp != NULL){
+            if(count+1 == position){
+                LinkedList *next = temp->next->next;
+                temp->next = next;
+                break;
+            }
+            temp = temp->next;
+            count++;
+        }
+    }
+}
+//delete at given key
+//void deleteData(LinkedList **head_ref, int data){
+//
+//}
+//reversing the linked list
+void reverse(LinkedList **head_ref){
+    if(*head_ref != NULL){
+        LinkedList *curr = *head_ref;
+        LinkedList *next = NULL; LinkedList *prev = NULL;
+
+        while(curr != NULL){
+            next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+        }
+        *head_ref = prev;
     }
 }
 
@@ -54,10 +115,13 @@ int main() {
 
     printLinkedList(&l);
 
-    addBefore(&l, 26);
-    addBefore(&l, 27);
-
+    addAt(&l, 26, 2);
+    addAt(&l, 32, 4);
+    addAt(&l, 30, 6);
     printLinkedList(&l);
+    deleteAt(&l, 1);
+    printLinkedList(&l);
+
 
     return 0;
 }
