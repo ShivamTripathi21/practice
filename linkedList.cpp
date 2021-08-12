@@ -2,6 +2,7 @@
 // Created by shivam tripathi on 10/08/21.
 //
 #include <iostream>
+#include "unordered_set"
 using namespace std;
 class LinkedList{
 public:
@@ -75,9 +76,22 @@ void deleteAt(LinkedList **head_ref, int position){
     }
 }
 //delete at given key
-//void deleteData(LinkedList **head_ref, int data){
-//
-//}
+void deleteData(LinkedList **head_ref, int data){
+    if(*head_ref != NULL){
+        LinkedList *temp = *head_ref;
+        if(temp->data == data){
+            deleteAt(head_ref, 1);
+        }
+        while(temp->next != NULL){
+            if(temp->next->data == data){
+                LinkedList *next = temp->next->next;
+                temp->next = next;
+                break;
+            }
+            temp = temp->next;
+        }
+    }
+}
 //reversing the linked list
 void reverse(LinkedList **head_ref){
     if(*head_ref != NULL){
@@ -92,6 +106,22 @@ void reverse(LinkedList **head_ref){
         }
         *head_ref = prev;
     }
+}
+//swap node of given two inputs // not values --> screen shots
+//detect loop
+bool detectLoop(LinkedList* h)
+{
+    unordered_set<LinkedList*> s;
+    while (h != NULL) {
+        if (s.find(h) != s.end())
+            return true;
+
+        s.insert(h);
+
+        h = h->next;
+    }
+
+    return false;
 }
 
 void printLinkedList(LinkedList **head_ref){
@@ -119,7 +149,7 @@ int main() {
     addAt(&l, 32, 4);
     addAt(&l, 30, 6);
     printLinkedList(&l);
-    deleteAt(&l, 1);
+    deleteData(&l, 23);
     printLinkedList(&l);
 
 
