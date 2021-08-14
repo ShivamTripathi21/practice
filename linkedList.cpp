@@ -123,6 +123,17 @@ bool detectLoop(LinkedList* h)
 
     return false;
 }
+//kth node from end
+void DoSomething(LinkedList **head_ref, int k){
+    LinkedList *tempA = *head_ref;
+    LinkedList *tempB = *head_ref;
+    int count = 0;
+    while(tempA != NULL){
+        tempA = tempA->next;
+        count++;
+    }
+
+}
 
 void printLinkedList(LinkedList **head_ref){
     LinkedList *temp = *head_ref;
